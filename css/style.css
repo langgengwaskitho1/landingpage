@@ -1,0 +1,30 @@
+/* Navbar */
+.navbar-brand {
+    font-family: Viga;
+    font-size: 32px;
+}
+
+
+
+/* ukuran yang berbeda dekstop version */
+/* ketika diperkecil maka tidak akan berpengaruh */
+@media (min-width: 992px) { 
+    .nav-link {
+        text-transform: uppercase;
+        margin-right: 30px;
+    }
+
+
+    /* ketika navlink dihover munculkan afternya */
+    .nav-link:hover:after {
+        content: '';
+        display: block;
+        border-bottom: 3px solid #0B63DC;
+        width: 50%;
+        margin: auto;
+        padding-bottom: 5px;
+        /* biar gak naik setiap disorot maka */
+        margin-bottom: -8px;
+    }
+    
+ }
