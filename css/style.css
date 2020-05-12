@@ -1,8 +1,13 @@
 /* Navbar */
+.navbar {
+    /* karena akan menggunakan zindex maka kita harus merubah kedalam static position */
+    position: relative;
+    z-index: 1;
+}
 .navbar-brand {
     font-family: Viga;
     font-size: 32px;
-    
+
 }
 
 /* jumbotron */
@@ -12,8 +17,26 @@
     background-size: cover;
     height: 540px;
     text-align: center;
-    
-    
+    position: relative;
+    /* biar nanti dijumbotron naik satu dimensi juga */
+}
+
+.jumbotron .container {
+    z-index: 1;
+    position: relative;
+}
+
+.jumbotron::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 80%;
+    background-image: linear-gradient(to top, rgba(0,0,1), rgba(0,0,0,0)) ;
+    /* dari bawah keatas */
+    position: absolute;
+    /* biar naik 1 dan gampang gesernya */
+    bottom: 0;
+    /* supaya nempel paling bawh jumbotronnya */
 }
 
 .jumbotron .display-4 {
@@ -29,6 +52,15 @@
     font-weight: 500;
 }
 
+/* info panel */
+.info-panel {
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.7) ;
+    /* x = 0. y = 0, blurnya 0.5 */
+    border-radius: 12px;
+    margin-top: -50px;
+    background-color: white;
+}
+
 /* uttility */
 .tombol {
     text-transform: uppercase;
@@ -40,11 +72,14 @@
 /* ukuran yang berbeda dekstop version */
 /* ketika diperkecil maka tidak akan berpengaruh */
 @media (min-width: 992px) {
-    .navbar-brand, .nav-link {
+
+    .navbar-brand,
+    .nav-link {
         color: white !important;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
         /* alurnya x ofsite 1px, y ofset 1px geser bawah, 1px tebal bayangan 1px*/
     }
+
     .nav-link {
         text-transform: uppercase;
         margin-right: 30px;
