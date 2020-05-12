@@ -88,7 +88,6 @@
 /* working space */
 .workingspace {
     margin-top: 120px;
-    text-align: center;
 }
 
 .workingspace h3 {
@@ -123,8 +122,16 @@
 }
 
 .testimonial figure img {
+    width: 60px;
+    margin: 20px 10px 10px;
+    /* artinya atas, kiri kanan dan bawah */
+    opacity: 0.6;
+}
+
+.testimonial figure img.utama {
     width: 90px;
-    margin-top: 20px;
+    opacity: 1;
+    margin-top: 5px;
 }
 
 .testimonial figure h5 {
@@ -134,13 +141,24 @@
     color: #1C2C5D;
 }
 
-.testimonial figure span {
+.testimonial figure p {
     font-size: 12px;
-    color: #acacac;   
+    color: #acacac;
+    margin-top: 5px;
 }
 
 .testimonial figcaption {
     text-align: center;
+}
+
+/* footer */
+.footer {
+    margin-top: 100px;
+}
+
+.footer p {
+    color: #acacac;
+    font-size: 18px;
 }
 
 /* uttility */
@@ -187,10 +205,6 @@
 
     .jumbotron .display-4 {
         font-size: 62px;
-    }
-
-    .workingspace {
-        text-align: center;
     }
 
     .testimonial h5 {
