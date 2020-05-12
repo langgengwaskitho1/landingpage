@@ -2,13 +2,49 @@
 .navbar-brand {
     font-family: Viga;
     font-size: 32px;
+    
+}
+
+/* jumbotron */
+.jumbotron {
+    background-image: url(../img/jumbotron-bg.jpg);
+    /* ingat dia harus keluar dahulu */
+    background-size: cover;
+    height: 640px;
+    text-align: center;
+    
+    
+}
+
+.jumbotron .display-4 {
+    color: white;
+    margin-top: 150px;
+    font-weight: 200;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.jumbotron .display-4 span {
+    font-weight: 500;
+}
+
+/* uttility */
+.tombol {
+    text-transform: uppercase;
+    border-radius: 40px;
 }
 
 
 
 /* ukuran yang berbeda dekstop version */
 /* ketika diperkecil maka tidak akan berpengaruh */
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
+    .navbar-brand, .nav-link {
+        color: white !important;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+        /* alurnya x ofsite 1px, y ofset 1px geser bawah, 1px tebal bayangan 1px*/
+    }
     .nav-link {
         text-transform: uppercase;
         margin-right: 30px;
@@ -26,5 +62,13 @@
         /* biar gak naik setiap disorot maka */
         margin-bottom: -8px;
     }
-    
- }
+
+    .jumbotron {
+        margin-top: -75px;
+    }
+
+    .jumbotron .display-4 {
+        font-size: 62px;
+    }
+
+}
